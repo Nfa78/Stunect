@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Stunect</string>
+    <string-array name="Countries">
+        <item>Italy</item>
+        <item>Israel</item>
+        <item>Palestine</item>
+        <item>Germany</item>
+        <item>England</item>
+        <item>France</item>
+        <item>Russia</item>
+        <item>China</item>
+        <item>Jordan</item>
+        <item>Croatia</item>
+        <item>Iceland</item>
+        <item>Denmark</item>
+        <item>Sweden</item>
+        <item>Canada</item>
+        <item>North Korea</item>
+
+    </string-array>
+</resources>
