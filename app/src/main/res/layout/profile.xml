@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1C1C">
+
+    <TextView
+        android:id="@+id/p_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_marginBottom="109dp"
+        android:background="#0E70E8"
+        android:fontFamily="serif"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/p_lastName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="57dp" />
+
+    <TextView
+        android:id="@+id/p_lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="#0E70E8"
+        android:fontFamily="serif"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/p_email"
+        tools:layout_editor_absoluteX="57dp" />
+
+    <TextView
+        android:id="@+id/p_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="#0E70E8"
+        android:fontFamily="serif"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/p_pass"
+        tools:layout_editor_absoluteX="57dp" />
+
+    <TextView
+        android:id="@+id/p_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="#0E70E8"
+        android:fontFamily="serif"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/p_Country"
+        tools:layout_editor_absoluteX="57dp" />
+
+    <TextView
+        android:id="@+id/p_Country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="#0E70E8"
+        android:fontFamily="serif"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/p_City"
+        tools:layout_editor_absoluteX="57dp" />
+
+    <TextView
+        android:id="@+id/p_City"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="216dp"
+        android:background="#0E70E8"
+        android:fontFamily="serif"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="57dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
