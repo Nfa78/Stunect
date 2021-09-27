@@ -6,9 +6,17 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8439a587-48b6-4783-aa86-1d0f3b8a7959" name="Default Changelist" comment="">
+    <list default="true" id="157025f2-d644-4606-bdda-89562e52d339" name="Default Changelist" comment="Merge branch 'master' of https://github.com/Nfa78/Stunect&#10;&#10;# Conflicts:&#10;#&#9;.gradle/6.1.1/executionHistory/executionHistory.bin&#10;#&#9;.gradle/6.1.1/executionHistory/executionHistory.lock&#10;#&#9;.gradle/6.1.1/fileHashes/fileHashes.bin&#10;#&#9;.gradle/6.1.1/fileHashes/fileHashes.lock&#10;#&#9;.gradle/6.1.1/fileHashes/resourceHashesCache.bin&#10;#&#9;.gradle/6.1.1/javaCompile/classAnalysis.bin&#10;#&#9;.gradle/6.1.1/javaCompile/javaCompile.lock&#10;#&#9;.gradle/6.1.1/javaCompile/taskHistory.bin&#10;#&#9;.gradle/buildOutputCleanup/buildOutputCleanup.lock&#10;#&#9;.gradle/buildOutputCleanup/outputFiles.bin&#10;#&#9;.gradle/checksums/checksums.lock&#10;#&#9;.gradle/checksums/md5-checksums.bin&#10;#&#9;.gradle/checksums/sha1-checksums.bin&#10;#&#9;.idea/gradle.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml&#10;#&#9;.idea/modules/Stunect.iml&#10;#&#9;app/src/main/java/com/nfa/stunect/MainActivity.java&#10;#&#9;app/src/main/java/com/nfa/stunect/University.java&#10;#&#9;local.properties">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Stunect.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/app/Stunect.app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nfa/stunect/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nfa/stunect/University.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +32,12 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -37,6 +50,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1wuAnJiHhKld2rnyYENTJnKvCCr" />
@@ -50,6 +64,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_API_30_x86" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-08-25T18:30:14.936Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -120,16 +135,26 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8439a587-48b6-4783-aa86-1d0f3b8a7959" name="Default Changelist" comment="" />
+      <changelist id="157025f2-d644-4606-bdda-89562e52d339" name="Default Changelist" comment="" />
       <created>1629298266015</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629298266015</updated>
     </task>
+    <task id="LOCAL-00001" summary="zbbiwifeiasfi">
+      <created>1632767392032</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1632767392032</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="zbbiwifeiasfi" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/Nfa78/Stunect&#10;&#10;# Conflicts:&#10;#&#9;.gradle/6.1.1/executionHistory/executionHistory.bin&#10;#&#9;.gradle/6.1.1/executionHistory/executionHistory.lock&#10;#&#9;.gradle/6.1.1/fileHashes/fileHashes.bin&#10;#&#9;.gradle/6.1.1/fileHashes/fileHashes.lock&#10;#&#9;.gradle/6.1.1/fileHashes/resourceHashesCache.bin&#10;#&#9;.gradle/6.1.1/javaCompile/classAnalysis.bin&#10;#&#9;.gradle/6.1.1/javaCompile/javaCompile.lock&#10;#&#9;.gradle/6.1.1/javaCompile/taskHistory.bin&#10;#&#9;.gradle/buildOutputCleanup/buildOutputCleanup.lock&#10;#&#9;.gradle/buildOutputCleanup/outputFiles.bin&#10;#&#9;.gradle/checksums/checksums.lock&#10;#&#9;.gradle/checksums/md5-checksums.bin&#10;#&#9;.gradle/checksums/sha1-checksums.bin&#10;#&#9;.idea/gradle.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml&#10;#&#9;.idea/modules/Stunect.iml&#10;#&#9;app/src/main/java/com/nfa/stunect/MainActivity.java&#10;#&#9;app/src/main/java/com/nfa/stunect/University.java&#10;#&#9;local.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/Nfa78/Stunect&#10;&#10;# Conflicts:&#10;#&#9;.gradle/6.1.1/executionHistory/executionHistory.bin&#10;#&#9;.gradle/6.1.1/executionHistory/executionHistory.lock&#10;#&#9;.gradle/6.1.1/fileHashes/fileHashes.bin&#10;#&#9;.gradle/6.1.1/fileHashes/fileHashes.lock&#10;#&#9;.gradle/6.1.1/fileHashes/resourceHashesCache.bin&#10;#&#9;.gradle/6.1.1/javaCompile/classAnalysis.bin&#10;#&#9;.gradle/6.1.1/javaCompile/javaCompile.lock&#10;#&#9;.gradle/6.1.1/javaCompile/taskHistory.bin&#10;#&#9;.gradle/buildOutputCleanup/buildOutputCleanup.lock&#10;#&#9;.gradle/buildOutputCleanup/outputFiles.bin&#10;#&#9;.gradle/checksums/checksums.lock&#10;#&#9;.gradle/checksums/md5-checksums.bin&#10;#&#9;.gradle/checksums/sha1-checksums.bin&#10;#&#9;.idea/gradle.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml&#10;#&#9;.idea/modules/Stunect.iml&#10;#&#9;app/src/main/java/com/nfa/stunect/MainActivity.java&#10;#&#9;app/src/main/java/com/nfa/stunect/University.java&#10;#&#9;local.properties" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Notifications" timestamp="1632763684521">
@@ -148,10 +173,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1630875083738" />
-    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1632760753304">
+    <state x="424" y="0" key="CommitChangelistDialog2" timestamp="1632767877138">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1632760753304" />
+    <state x="424" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1632767877138" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1630878119080">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -172,14 +197,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1629992667282" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1632763693198">
+    <state x="481" y="128" key="MultipleFileMergeDialog" timestamp="1632767814623">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1632763693198" />
-    <state x="88" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1632760655975">
+    <state x="481" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1632767814623" />
+    <state x="478" y="117" key="VCS.ChangeListViewerDialog" timestamp="1632767206966">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="88" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1632760655975" />
+    <state x="478" y="117" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1632767206966" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1632767219086">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1632767219086" />
+    <state x="88" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1632767684272">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="88" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1632767684272" />
+    <state x="569" y="203" key="git4idea.merge.GitMergeDialog" timestamp="1632767858805">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="569" y="203" key="git4idea.merge.GitMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1632767858805" />
+    <state x="560" y="276" key="git4idea.rebase.GitRebaseDialog" timestamp="1632767307035">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="560" y="276" key="git4idea.rebase.GitRebaseDialog/0.0.1536.824@0.0.1536.824" timestamp="1632767307035" />
+    <state x="510" y="154" key="git4idea.rebase.GitRebaseEditor" timestamp="1632767349831">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="510" y="154" key="git4idea.rebase.GitRebaseEditor/0.0.1536.824@0.0.1536.824" timestamp="1632767349831" />
     <state x="218" y="265" key="psd.add.jar.dependency.panel.dimension" timestamp="1629303476479">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -16,7 +16,7 @@ public class University {
         this.email_suffix = email_suffix;
 
     }
-    // tl7s teze
+ /// tl7s teze
     //Getters
 
     public int getUniID() {
@@ -28,7 +28,7 @@ public class University {
     }
 
     public String getCountry() {
-        return this.getCountry();
+        return country;
     }
 
     public String getCity() {
