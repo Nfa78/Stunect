@@ -37,8 +37,11 @@ public class SQLHelpers {
 
     public static Boolean checkIfExists (String statement){
         checkCon ();
+        //PreparedStatement ps = connection.prepareStatement("SELECT uId FROM Person WHERE email = '"+em+"';");
+        //                        ps.execute();
         return  false;
     }
+
 
 
     // Getters
@@ -113,6 +116,15 @@ public class SQLHelpers {
     }
 
     // Methods executions
+
+    public static void closeConnection ()
+    {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static Statement create_Statement (){
         checkCon ();

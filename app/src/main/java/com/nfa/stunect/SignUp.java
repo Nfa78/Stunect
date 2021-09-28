@@ -36,69 +36,37 @@ public class SignUp extends AppCompatActivity {
         btnconnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ConSQL c = new ConSQL();
-                Connection connection = null;
-                connection = c.connect2DB();
-                if(c!=null)
-                {
+                SQLHelpers.initConnection();
+
                     String n="",ls="",em="",pas="",Con="",Cit="";
-                    int id=0;
-                    String sqlGetID = "SELECT Max(uid) FROM Users;";
-                    String sqlStatement = "INSERT INTO Users VALUES (";
-                    Statement smt = null;
-                    try {
-                        smt = connection.createStatement();
-                    } catch (Exception e) {
-                        Log.e("Error ",e.getMessage());
-                    }
-                    try {
-                        ResultSet set = smt.executeQuery(sqlGetID);
-                        //Name.setText(set.getString(1));
-                        while(set.next())
-                        {
-                            id = Integer.parseInt(set.getString(1))+1;
-                        }
-                    } catch (Exception e) {
-                        Log.e("Error",e.getMessage());
-                    }
-                    // insert
-                    try {
-                        smt = connection.createStatement();
-                    } catch (Exception e) {
-                        Log.e("Error ",e.getMessage());
-                    }
-                    try {
+                    String id="";
+                    
                         n = ((TextInputEditText)findViewById(R.id.getName)).getEditableText().toString();
                         ls = ((TextInputEditText)findViewById(R.id.getLastName)).getEditableText().toString();
                         pas =  ((EditText)findViewById(R.id.getPassword)).getText().toString();
                         em = ((EditText)findViewById(R.id.GetEmail)).getText().toString();
                         Con = ((Spinner)findViewById(R.id.Countries_Spinner)).getSelectedItem().toString();
                         Cit = ((EditText)findViewById(R.id.getCity)).getText().toString();
-                        Context context = getApplicationContext(); PreparedStatement ps = connection.prepareStatement("SELECT uId FROM Person WHERE email = '"+em+"';");
-                        ps.execute();
+                        Context context = getApplicationContext();
 
-                        if(ps.getResultSet().next()) { Toast.makeText(context,"email Exists,choose another one !", Toast.LENGTH_LONG).show();
-                            connection.close();
+                        if(SQLHelpers.checkIfExists("check email SQL")) { Toast.makeText(context,"email Exists,choose another one !", Toast.LENGTH_LONG).show();
+                            SQLHelpers.closeConnection();
                             return;}
-                        sqlStatement += Integer.toString(id) + ","+"'" +n+"',"+"'"+ls+"',"+"'"+em+"',"+"'"+pas+"','"+Con+"',"+"'"+Cit+"');";
-                        System.out.println(sqlStatement);
-                        int set = smt.executeUpdate(sqlStatement);
+
+                        int set = SQLHelpers.insertIntoDB("Users",id,n,ls,pas,em);
                         System.out.println(set);
                         //Name.setText(set.getString(1));
                         String s= set == 1 ? "Successfull" : "Failed";
                         Toast.makeText(context,"Result -> "+s, Toast.LENGTH_LONG).show();
 
-                        connection.close();
+                        SQLHelpers.closeConnection();
                         Intent intentMain = new Intent(SignUp.this ,
                                 MainActivity.class);
                         SignUp.this.startActivity(intentMain);
                         Log.i("Content "," Main layout ");
-                    } catch (Exception e) {
-                        Log.e("Error",e.getMessage());
-                    }
 
                 }
-            }
+
         });
     }
     }
