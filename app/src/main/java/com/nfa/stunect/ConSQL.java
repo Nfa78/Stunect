@@ -12,7 +12,9 @@ public Connection conClass ()
     String ip ="192.168.1.46",port="1433",db="StunectDB",username ="",pass="";
     StrictMode.ThreadPolicy a = new StrictMode.ThreadPolicy.Builder().permitAll().build();
     StrictMode.setThreadPolicy(a);
-    String ConnectURL = null,cnURL="jdbc:jtds:sqlserver://localhost:1433;databasename=StunectDB;";
+    String ConnectURL = null;
+    //cnURL="jdbc:jtds:sqlserver://localhost:1433;databasename=StunectDB;";
+
     try {
         Class.forName("net.sourceforge.jtds.jdbc.Driver");
         //DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
