@@ -2,13 +2,13 @@ package com.nfa.stunect;
 
 public class University {
 
-    private final int uniID;
+    private final String uniID;
     private String name;
     private String country;
     private String city;
     private String email_suffix;
 
-    public University(int uniID,String name,String country,String city,String email_suffix) {
+    public University(String uniID,String name,String country,String city,String email_suffix) {
         this.uniID = uniID;
         this.name = name;
         this.country = country;
@@ -19,7 +19,7 @@ public class University {
 
     //Getters
 
-    public int getUniID() {
+    public String getUniID() {
         return this.uniID;
     }
 

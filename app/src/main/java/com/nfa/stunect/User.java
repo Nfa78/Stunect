@@ -3,14 +3,14 @@ package com.nfa.stunect;
 public class User {
     private String name;
     private String lastName;
-    private int id;
+    private String id;
     private String Country,City;
     private float rating;
     private int ratingsCount;
     private String password;
     private String email;
 
-    public User (int id,String name,String last,String email,String password,String Country,String city){
+    public User (String id,String name,String last,String email,String password,String Country,String city) {
       this.id = id;
       this.name = name;
       this.lastName = last;
@@ -18,9 +18,10 @@ public class User {
       this.City = city;
       this.password = password;
       this.email = email;
+
     }
 
-    public User (int id,String name,String last,String email,String password){
+    public User (String id,String name,String last,String email,String password){
         this.id = id;
         this.name = name;
         this.lastName = last;
@@ -38,7 +39,7 @@ public class User {
         return this.lastName;
     }
 
-    public int getID () {
+    public String getID () {
         return this.id;
     }
 
