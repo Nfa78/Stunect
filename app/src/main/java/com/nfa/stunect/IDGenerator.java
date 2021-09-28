@@ -6,20 +6,21 @@ public class IDGenerator {
 
     public String generateID (String preFix, String initial) {
 
-        String tableName = "";
+        String result = preFix.concat(initial);
 
         try {
 
            switch (preFix) {
                case "user":
-                   tableName = "User";
+                   result += SQLHelpers.getCountOfDB("User");
                case "group":
-                   tableName = "Group";
-               case "uni" :
-                   tableName = "University";
+                   result += SQLHelpers.getCountOfDB("Group");
+               case "uni":
+                   result+= SQLHelpers.getCountOfDB("University");
 
            }
-            return preFix + initial + SQLHelpers.getCountOfDB(tableName);
+
+            return result;
 
 
         } catch (Exception e) {

@@ -38,22 +38,23 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View view) {
                 SQLHelpers.initConnection();
 
-                    String n="",ls="",em="",pas="",Con="",Cit="";
-                    String id="";
+                    String name = "",lastName ="",email = "",password = "", connection = "", city = "";
+                    String id = "";
                     
-                        n = ((TextInputEditText)findViewById(R.id.getName)).getEditableText().toString();
-                        ls = ((TextInputEditText)findViewById(R.id.getLastName)).getEditableText().toString();
-                        pas =  ((EditText)findViewById(R.id.getPassword)).getText().toString();
-                        em = ((EditText)findViewById(R.id.GetEmail)).getText().toString();
-                        Con = ((Spinner)findViewById(R.id.Countries_Spinner)).getSelectedItem().toString();
-                        Cit = ((EditText)findViewById(R.id.getCity)).getText().toString();
+                        name = ((TextInputEditText)findViewById(R.id.getName)).getEditableText().toString();
+                        lastName = ((TextInputEditText)findViewById(R.id.getLastName)).getEditableText().toString();
+                        password =  ((EditText)findViewById(R.id.getPassword)).getText().toString();
+                        email = ((EditText)findViewById(R.id.GetEmail)).getText().toString();
+                        connection = ((Spinner)findViewById(R.id.Countries_Spinner)).getSelectedItem().toString();
+                        city = ((EditText)findViewById(R.id.getCity)).getText().toString();
                         Context context = getApplicationContext();
 
-                        if(SQLHelpers.checkIfExists("check email SQL")) { Toast.makeText(context,"email Exists,choose another one !", Toast.LENGTH_LONG).show();
+                        if (SQLHelpers.checkIfExists("check email SQL")) { Toast.makeText(context,"email Exists,choose another one !", Toast.LENGTH_LONG).show();
                             SQLHelpers.closeConnection();
-                            return;}
+                            return;
+                        }
 
-                        int set = SQLHelpers.insertIntoDB("Users",id,n,ls,pas,em);
+                        int set = SQLHelpers.insertIntoDB("Users",id,name,lastName,password,email);
                         System.out.println(set);
                         //Name.setText(set.getString(1));
                         String s= set == 1 ? "Successfull" : "Failed";
