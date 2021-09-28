@@ -76,6 +76,7 @@ public class SignUp extends AppCompatActivity {
                         Cit = ((EditText)findViewById(R.id.getCity)).getText().toString();
                         Context context = getApplicationContext(); PreparedStatement ps = connection.prepareStatement("SELECT uId FROM Person WHERE email = '"+em+"';");
                         ps.execute();
+
                         if(ps.getResultSet().next()) { Toast.makeText(context,"email Exists,choose another one !", Toast.LENGTH_LONG).show();
                             connection.close();
                             return;}
