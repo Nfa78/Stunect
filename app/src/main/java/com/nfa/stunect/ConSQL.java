@@ -13,7 +13,7 @@ public Connection connect2DB ()
     StrictMode.ThreadPolicy a = new StrictMode.ThreadPolicy.Builder().permitAll().build();
     StrictMode.setThreadPolicy(a);
     String ConnectURL = null,cnURL="jdbc:jtds:sqlserver://localhost:1433;databasename=StunectDB;";
-    try{
+    try {
         Class.forName("net.sourceforge.jtds.jdbc.Driver");
         //DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
         //Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

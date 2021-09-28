@@ -2,11 +2,11 @@ package com.nfa.stunect;
 
 public class Group {
 
-    private final int groupID;
+    private final String groupID;
     private groupType type;
     private int capacity;
 
-    public Group(int groupID, groupType type) {
+    public Group(String groupID, groupType type) {
 
         this.groupID = groupID;
         this.type = type;
@@ -15,7 +15,7 @@ public class Group {
 
     //Getters
 
-    public int getGroupID () {
+    public String getGroupID () {
         return this.groupID;
     }
 
