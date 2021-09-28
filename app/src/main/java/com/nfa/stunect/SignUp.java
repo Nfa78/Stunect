@@ -38,13 +38,13 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View view) {
                 ConSQL c = new ConSQL();
                 Connection connection = null;
-                connection = c.conClass();
+                connection = c.connect2DB();
                 if(c!=null)
                 {
                     String n="",ls="",em="",pas="",Con="",Cit="";
                     int id=0;
-                    String sqlGetID = "SELECT Max(uid) FROM Person;";
-                    String sqlStatement = "INSERT INTO Person VALUES (";
+                    String sqlGetID = "SELECT Max(uid) FROM Users;";
+                    String sqlStatement = "INSERT INTO Users VALUES (";
                     Statement smt = null;
                     try {
                         smt = connection.createStatement();

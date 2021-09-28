@@ -27,7 +27,7 @@ public class logIn extends AppCompatActivity {
             public void onClick(View view) {
                 ConSQL c = new ConSQL();
                 Connection connection = null;
-                connection = c.conClass();
+                connection = c.connect2DB();
                 if (c != null) {
                     String n = "", ls = "", em = "", pas = "";
                     String inputtedPass = "";

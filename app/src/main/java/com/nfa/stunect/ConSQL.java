@@ -7,7 +7,7 @@ import java.sql.*;
 public class ConSQL {
 Connection con;
 @SuppressLint("NewApi")
-public Connection conClass ()
+public Connection connect2DB ()
 {
     String ip ="192.168.1.46",port="1433",db="StunectDB",username ="",pass="";
     StrictMode.ThreadPolicy a = new StrictMode.ThreadPolicy.Builder().permitAll().build();
