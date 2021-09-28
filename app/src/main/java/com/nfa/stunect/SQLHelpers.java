@@ -9,12 +9,13 @@ public class SQLHelpers {
 
     public static Boolean initialized;
     private static Connection connection;
+
     public static  int initConnection ()
     {
         ConSQL c = new ConSQL();
         connection = null;
         connection = c.connect2DB();
-        initialized = connection !=null;
+        initialized = connection != null;
         return  0;
 
     }
@@ -28,10 +29,13 @@ public class SQLHelpers {
 
     public static List<String> getRow_Strings (String statement)
     {
+
       return null;
+
     }
 
-    public static int getCountOfDB (String tableName){
+    public static int getCountOfDB (String tableName) {
+
         return 0;
     }
 
