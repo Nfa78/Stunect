@@ -31,13 +31,13 @@ public class SQLHelpers {
       return null;
     }
 
-    public static int getCountOfDB (String databaseName){
+    public static int getCountOfDB (String tableName){
         return 0;
     }
 
     // Setters
 
-    public static void insertIntoDB (String databaseName)
+    public static void insertIntoDB (String tableName)
     {
 
     }
