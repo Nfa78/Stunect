@@ -16,7 +16,7 @@ public class IDGenerator {
                case "group":
                    result += SQLHelpers.getCountOfDB("Group");
                case "uni":
-                   result+= SQLHelpers.getCountOfDB("University");
+                   result += SQLHelpers.getCountOfDB("University");
 
            }
 
