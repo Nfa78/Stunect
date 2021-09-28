@@ -9,22 +9,6 @@ public class User {
     private int ratingsCount;
     private String password;
     private String email;
-    public String getName(){return name;}
-    public String getLastName(){return  lastName;}
-    public int getID (){return  id;}
-    public float getRating(){return  rating;}
-    public float getRatingsCount(){return  ratingsCount;}
-    public void setRating(float _nRating)
-    {
-        rating = ((rating*ratingsCount) + _nRating)
-                /(ratingsCount+1);
-        ratingsCount++;
-    }
-    public String getEmail(){return email;}
-    public String getCountry(){return  Country;}
-    public String getCity(){return City;}
-    public String getPassword() {return password;}
-
 
     public User (int id,String name,String last,String email,String password,String Country,String city){
       this.id = id;
@@ -35,6 +19,7 @@ public class User {
       this.password = password;
       this.email = email;
     }
+
     public User (int id,String name,String last,String email,String password){
         this.id = id;
         this.name = name;
@@ -42,4 +27,55 @@ public class User {
         this.password = password;
         this.email = email;
     }
+
+    //Getters
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    public int getID () {
+        return this.id;
+    }
+
+    public float getRating() {
+        return this.rating;
+    }
+
+    public float getRatingsCount() {
+        return this.ratingsCount;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public String getCountry() {
+        return this.Country;
+    }
+
+    public String getCity() {
+        return this.City;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    //Setters
+
+    public void setRating(float _nRating)
+    {
+        rating = ((rating*ratingsCount) + _nRating)
+                /(ratingsCount+1);
+        ratingsCount++;
+    }
+
+
+
+
 }

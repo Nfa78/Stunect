@@ -16,8 +16,7 @@ public class University {
         this.email_suffix = email_suffix;
 
     }
- /// tl7s teze
-    //wa7ad faggot suck my cock
+
     //Getters
 
     public int getUniID() {
@@ -29,7 +28,7 @@ public class University {
     }
 
     public String getCountry() {
-        return country;
+        return this.country;
     }
 
     public String getCity() {
