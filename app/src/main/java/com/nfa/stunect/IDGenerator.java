@@ -4,23 +4,29 @@ import android.util.Log;
 
 public class IDGenerator {
 
-    public String generateID (String preFix, String initial) {
 
-        String result = preFix.concat(initial);
+
+    public static String generateID (String preFix, User user) {
+
+        StringBuilder result = new StringBuilder();
+        result.append(preFix).append(user.getInitials());
 
         try {
 
            switch (preFix) {
 
                case "user":
-                   result = result.concat(String.valueOf(SQLHelpers.getCountOfDB("User")));
+                   result.append(SQLHelpers.getCountOfDB("User"));
+                   break;
                case "group":
-                   result = result.concat(String.valueOf(SQLHelpers.getCountOfDB("Group")));
+                   result.append(SQLHelpers.getCountOfDB("Group"));
+                   break;
                case "uni":
-                   result = result.concat(String.valueOf(SQLHelpers.getCountOfDB("University")));
+                   result.append(SQLHelpers.getCountOfDB("University"));
+                   break;
            }
 
-            return result;
+            return result.toString();
 
 
         } catch (Exception e) {
@@ -32,5 +38,6 @@ public class IDGenerator {
 
 
     }
+
 
 }
