@@ -13,11 +13,11 @@ public class IDGenerator {
            switch (preFix) {
 
                case "user":
-                   result.concat(String.valueOf(SQLHelpers.getCountOfDB("User")));
+                   result = result.concat(String.valueOf(SQLHelpers.getCountOfDB("User")));
                case "group":
-                   result.concat(String.valueOf(SQLHelpers.getCountOfDB("Group")));
+                   result = result.concat(String.valueOf(SQLHelpers.getCountOfDB("Group")));
                case "uni":
-                   result.concat(String.valueOf(SQLHelpers.getCountOfDB("University")));
+                   result = result.concat(String.valueOf(SQLHelpers.getCountOfDB("University")));
            }
 
             return result;
