@@ -92,7 +92,7 @@ public class SQLHelpers {
         checkCon ();
         Statement smt = create_Statement();
         String sttmnt = "SELECT COUNT(*) FROM " + tableName +";";
-        int count =0;
+        int count = 0;
         String res = getColumn(sttmnt);
         count = Integer.parseInt(res);
         return count;

@@ -76,6 +76,13 @@ public class User {
         ratingsCount++;
     }
 
+    //Helper Methods
+
+    public String getInitials() {
+
+        return this.name.concat(this.lastName);
+    }
+
 
 
 

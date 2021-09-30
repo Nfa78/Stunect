@@ -25,6 +25,7 @@ Connection connection;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         ImageButton btnconnect = (ImageButton)findViewById(R.id.SignUp_Button);
         btnconnect.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +39,7 @@ Connection connection;
 
             }
         });
+
         ImageButton btnconnect2 = (ImageButton)findViewById(R.id.LogIn_Button);
         btnconnect2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +50,10 @@ Connection connection;
                 Log.i("Content "," Main layout ");
 
 
+
+
             }
         });
+
     }
 }
