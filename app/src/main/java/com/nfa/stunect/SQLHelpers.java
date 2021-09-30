@@ -3,6 +3,7 @@ package com.nfa.stunect;
 import android.util.Log;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -37,9 +38,8 @@ public class SQLHelpers {
 
     public static Boolean checkIfExists (String statement){
         checkCon ();
-        //PreparedStatement ps = connection.prepareStatement("SELECT uId FROM Person WHERE email = '"+em+"';");
-        //                        ps.execute();
-        return  false;
+       String temp = getColumn(statement);
+       return temp == null ? false : true;
     }
 
 
@@ -62,11 +62,18 @@ public class SQLHelpers {
         List<String> strings = new ArrayList<String>();
         int i=1;
         while (set.next()) {
-            strings.add(set.getString(i));
+            try {
+                while (set.getString(i) != null) {
+                    strings.add(set.getString(i));
+                    i++;
+                }
+            } catch (SQLException e) {
+                //e.printStackTrace();
+            }
         }
       return strings;
     }
-    private static String getColumn (String statement)  {
+    public static String getColumn (String statement)  {
         checkCon ();
         Statement smt = create_Statement();
         ResultSet set =  executeQuery(smt,statement);
@@ -94,18 +101,22 @@ public class SQLHelpers {
     // Setters
 
     // only strings
-    public static int insertIntoDB (String tableName,String... values)
+    public static int insertIntoDB (String tableName,Object... values)
     {
         checkCon ();
         Statement smt = create_Statement();
         String sttmnt = "INSERT INTO " + tableName + " VALUES (";
-        for (String s : values) {
-           sttmnt = sttmnt.concat("'").concat(s).concat("'").concat(",");
+        for (Object o : values) {
+            if(o instanceof String)
+           sttmnt = sttmnt.concat("'").concat(o.toString()).concat("'").concat(",");
+            else
+                sttmnt = sttmnt.concat(o.toString()).concat(",");
         }
         StringBuffer b = new StringBuffer(sttmnt);
         b.deleteCharAt(b.length()-1);
         sttmnt = b.toString();
         sttmnt = sttmnt.concat(");");
+        System.out.println(sttmnt);
         int res = 0;
         try {
              res = smt.executeUpdate(sttmnt);

@@ -9,16 +9,26 @@
     android:backgroundTint="#020D3E"
     android:backgroundTintMode="src_atop">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="419dp"
+        android:layout_height="740dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg002" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-        android:layout_width="186dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="162dp"
-        android:background="#1429E6"
+        android:layout_width="171dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="164dp"
+        android:background="#52165FDC"
         android:backgroundTint="#1429E6"
         android:hint="Name"
-        android:textColorHint="#FFFBFB"
+        android:textColorHint="#24130202"
         app:helperText="Name"
         app:helperTextEnabled="true"
         app:hintEnabled="true"
@@ -35,17 +45,17 @@
             android:fontFamily="serif"
             android:hint="Name"
             android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
+            android:textColorHint="#240E0101" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="203dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="1dp"
+        android:layout_width="174dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="132dp"
         android:background="#FFFFFF"
-        android:backgroundTint="#1429E6"
-        android:textColorHint="#FFFFFF"
+        android:backgroundTint="#52165FDC"
+        android:textColorHint="#24150101"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -59,92 +69,55 @@
             android:hint="Last Name"
             android:singleLine="true"
             android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
+            android:textColorHint="#241C0101" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
         android:id="@+id/getPassword"
-        android:layout_width="212dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="180dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="24dp"
         android:background="#2A2AB8"
-        android:backgroundTint="#1429E6"
+        android:backgroundTint="#52165FDC"
         android:ems="10"
         android:fontFamily="serif"
         android:hint="Password"
         android:inputType="textPassword"
         android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#24120303"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/GetEmail" />
 
     <EditText
         android:id="@+id/GetEmail"
-        android:layout_width="223dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="201dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="1dp"
+        android:layout_width="176dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="132dp"
         android:background="#1A38EA"
-        android:backgroundTint="#1E50CF"
+        android:backgroundTint="#52165FDC"
         android:ems="10"
         android:fontFamily="serif"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#24150202"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/getPassword" />
+        tools:layout_editor_absoluteY="291dp" />
 
     <Button
         android:id="@+id/sign_up_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="146dp"
-        android:layout_marginTop="21dp"
         android:layout_marginEnd="178dp"
         android:layout_marginBottom="124dp"
-        android:backgroundTint="#192CD8"
+        android:backgroundTint="#A64E7AC6"
         android:fontFamily="serif"
         android:text="SIGN up"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/getCity" />
-
-    <Spinner
-        android:id="@+id/Countries_Spinner"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="53dp"
-        android:background="#2771B3"
-        android:backgroundTint="#1E4CC1"
-        app:layout_constraintBottom_toTopOf="@+id/getCity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/GetEmail" />
-
-    <EditText
-        android:id="@+id/getCity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
-        android:layout_marginBottom="21dp"
-        android:background="#115BB5"
-        android:ems="10"
-        android:fontFamily="serif"
-        android:hint="City"
-        android:inputType="textPersonName"
-        android:text="City"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/sign_up_button"
-        app:layout_constraintTop_toBottomOf="@+id/GetEmail"
-        tools:layout_editor_absoluteX="85dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

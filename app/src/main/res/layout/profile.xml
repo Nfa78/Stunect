@@ -6,27 +6,39 @@
     android:layout_height="match_parent"
     android:background="#1E1C1C">
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg002" />
+
     <TextView
         android:id="@+id/p_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
+        android:layout_marginEnd="256dp"
         android:layout_marginBottom="109dp"
-        android:background="#0E70E8"
+        android:background="#52165FDC"
         android:fontFamily="serif"
         android:text="TextView"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/p_lastName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="57dp" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/p_lastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:background="#0E70E8"
+        android:background="#52165FDC"
         android:fontFamily="serif"
         android:text="TextView"
         android:textColor="#FFFFFF"
@@ -39,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:background="#0E70E8"
+        android:background="#52165FDC"
         android:fontFamily="serif"
         android:text="TextView"
         android:textColor="#FFFFFF"
@@ -52,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
-        android:background="#0E70E8"
+        android:background="#52165FDC"
         android:fontFamily="serif"
         android:text="TextView"
         android:textColor="#FFFFFF"
@@ -65,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:background="#0E70E8"
+        android:background="#52165FDC"
         android:fontFamily="serif"
         android:text="TextView"
         android:textColor="#FFFFFF"
@@ -78,11 +90,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="216dp"
-        android:background="#0E70E8"
+        android:background="#52165FDC"
         android:fontFamily="serif"
         android:text="TextView"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="57dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

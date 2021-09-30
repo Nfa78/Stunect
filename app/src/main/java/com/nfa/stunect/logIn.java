@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListAdapter;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.List;
 
 public class logIn extends AppCompatActivity {
     public static User currentUser = null;
@@ -26,66 +28,36 @@ public class logIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                ConSQL c = new ConSQL();
-                Connection connection = null;
-                connection = c.connect2DB();
+                SQLHelpers.initConnection();
 
-                if (connection != null) {
                     String name = "", lastName = "", email = "", password = "";
                     String inputtedPass = "";
-                    String id = "";
-                    String sqlGetID = "SELECT uID FROM Person WHERE email = "  +"'" +email+ "'" + ";";
-                    String sqlStatement = "SELECT password from Person WHERE uID = " + id + ";";
-                    Statement smt = null;
+                    String sqlStatement;
 
-                    try {
-                        smt = connection.createStatement();
-                    } catch (Exception e) {
-                        Log.e("Error ", e.getMessage());
-                    }
-
-                    try {
                         email = ((EditText)findViewById(R.id.set_email)).getText().toString();
-                        sqlGetID = "SELECT uID FROM Person WHERE email = " + "'" +email+ "'" + ";";
-                        ResultSet set = smt.executeQuery(sqlGetID);
 
                         //Name.setText(set.getString(1));
-                        //id = Integer.parseInt(set.getString(1));
 
-                        while (set.next()) {
-                            id = set.getString(1);
-                        }
-
-                        sqlStatement = "SELECT password from Person WHERE uID = " + id + ";";
+                        sqlStatement = "SELECT password from Users WHERE Email = '" + email + "';";
                         System.out.println(sqlStatement);
-                        smt = connection.createStatement();
-                        set = smt.executeQuery(sqlStatement);
-                        //pas = (set.getString(4));
-
-                        while (set.next()) {
-                            password = (set.getString(1));
-                        }
+                        password = SQLHelpers.getColumn(sqlStatement);
 
                         inputtedPass = ((EditText) findViewById(R.id.set_password)).getText().toString();
                         Context context = getApplicationContext();
-                        System.out.println(password +id +" " + inputtedPass);
+                        System.out.println(password +email +" " + inputtedPass);
 
-                        if (password.trim().replaceAll("\\s+", " ").equalsIgnoreCase(inputtedPass.trim().replaceAll("\\s+", " "))) {
+                        if (StringHelpers.String_Cmp_filter_spaces(password,inputtedPass)) {
 
                             Toast.makeText(context, "Login Successfull", Toast.LENGTH_SHORT).show();
-                            sqlStatement = "SELECT firstName,lastName,Country,City from Person WHERE uID = " + id + ";";
-                            smt = connection.createStatement();
-                            set = smt.executeQuery(sqlStatement);
+                            sqlStatement = "SELECT Name,Last_Name from Users WHERE Email = '" + email + "';";
+
                             String con = "" , city = "";
 
-                            while (set.next()) {
-                                name = (set.getString(1));
-                                lastName = (set.getString(2));
-                                con = (set.getString(3));
-                                city = (set.getString(4));
-                            }
+                             List<String> list = SQLHelpers.getRow_Columns(sqlStatement);
+                            name = list.get(0);
+                            lastName = list.get(1);
 
-                            currentUser = new User(id,name,lastName,email,password,con,city);
+                            currentUser = new User(email,name,lastName,email,password,con,city);
                             Intent intentMain = new Intent(logIn.this ,
                                     Profile.class);
                             logIn.this.startActivity(intentMain);
@@ -93,13 +65,10 @@ public class logIn extends AppCompatActivity {
                         } else {
                             Toast.makeText(context, "Login Failed", Toast.LENGTH_SHORT).show();
                         }
-                        smt.close();
 
-                    } catch (Exception e) {
-                        Log.e("Error", e.getMessage());
-                    }
 
-                }
+
+
             }
         });
     }

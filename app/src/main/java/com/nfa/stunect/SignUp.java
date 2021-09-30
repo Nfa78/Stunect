@@ -29,31 +29,31 @@ public class SignUp extends AppCompatActivity {
      super.onCreate(savedInstanceState);
      setContentView(R.layout.sign_up);
         Button btnconnect = (Button)findViewById(R.id.sign_up_button);
-        Spinner spinner = (Spinner)findViewById(R.id.Countries_Spinner);
-        ArrayAdapter arrayAdapter = new ArrayAdapter<String>(SignUp.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.Countries));
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(arrayAdapter);
+       // Spinner spinner = (Spinner)findViewById(R.id.Countries_Spinner);
+        //ArrayAdapter arrayAdapter = new ArrayAdapter<String>(SignUp.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.Countries));
+        //arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //spinner.setAdapter(arrayAdapter);
         btnconnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SQLHelpers.initConnection();
 
                     String n="",ls="",em="",pas="",Con="",Cit="";
-                    String id="";
-                    
+                    String id="aka";
+
                         n = ((TextInputEditText)findViewById(R.id.getName)).getEditableText().toString();
                         ls = ((TextInputEditText)findViewById(R.id.getLastName)).getEditableText().toString();
                         pas =  ((EditText)findViewById(R.id.getPassword)).getText().toString();
                         em = ((EditText)findViewById(R.id.GetEmail)).getText().toString();
-                        Con = ((Spinner)findViewById(R.id.Countries_Spinner)).getSelectedItem().toString();
-                        Cit = ((EditText)findViewById(R.id.getCity)).getText().toString();
+                        //Con = ((Spinner)findViewById(R.id.Countries_Spinner)).getSelectedItem().toString();
+                       // Cit = ((EditText)findViewById(R.id.getCity)).getText().toString();
                         Context context = getApplicationContext();
 
-                        if(SQLHelpers.checkIfExists("check email SQL")) { Toast.makeText(context,"email Exists,choose another one !", Toast.LENGTH_LONG).show();
+                        if(SQLHelpers.checkIfExists("SELECT uID FROM USERS WHERE Email = '"+em+"'"+";")) { Toast.makeText(context,"email Exists,choose another one !", Toast.LENGTH_LONG).show();
                             SQLHelpers.closeConnection();
                             return;}
-
-                        int set = SQLHelpers.insertIntoDB("Users",id,n,ls,pas,em);
+                        id = id.split("@")[0];
+                        int set = SQLHelpers.insertIntoDB("Users",id,n,ls,pas,em,"Polito",80);
                         System.out.println(set);
                         //Name.setText(set.getString(1));
                         String s= set == 1 ? "Successfull" : "Failed";
@@ -66,7 +66,6 @@ public class SignUp extends AppCompatActivity {
                         Log.i("Content "," Main layout ");
 
                 }
-
         });
     }
     }

@@ -4,7 +4,7 @@ public class User {
     private String name;
     private String lastName;
     private String id;
-    private String Country,City;
+    private String Country="",City="";
     private float rating;
     private int ratingsCount;
     private String password;
